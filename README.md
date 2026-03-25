@@ -30,14 +30,19 @@
 
 A curated list of AI-powered sales automation skills, tools, and agents — cold outreach, lead generation, CRM workflows, LinkedIn automation, and B2B growth.
 
-> **Want workflows that actually do things?** These skills connect to real apps — HubSpot, Salesforce, Apollo, LinkedIn, Gmail — via [Composio](https://composio.dev/toolkits). No mock data, no demos. [See the workflow skills →](#composio-powered-workflow-skills)
+> **These aren't toy demos.** Every workflow skill connects to real apps — HubSpot, Salesforce, Apollo, LinkedIn, Gmail — and documents exactly which API actions to call. Point any AI agent at a skill file and go.
 
 ---
 
 ## Contents
 
 - [What Are Sales Automation Skills?](#what-are-sales-automation-skills)
-- [Skills](#skills)
+- [Workflow Skills](#workflow-skills)
+  - [Prospecting & Lead Gen](#prospecting--lead-gen)
+  - [Outreach & Engagement](#outreach--engagement)
+  - [Pipeline & Revenue Ops](#pipeline--revenue-ops)
+  - [Intelligence & Research](#intelligence--research)
+- [Open-Source Tools & Agents](#open-source-tools--agents)
   - [AI Sales Agents (End-to-End)](#ai-sales-agents-end-to-end)
   - [Cold Email & Outreach](#cold-email--outreach)
   - [LinkedIn Automation](#linkedin-automation)
@@ -46,11 +51,6 @@ A curated list of AI-powered sales automation skills, tools, and agents — cold
   - [Voice & Call Agents](#voice--call-agents)
   - [Marketing Automation](#marketing-automation)
   - [Agent Skills for Sales](#agent-skills-for-sales)
-- [Composio-Powered Workflow Skills](#composio-powered-workflow-skills)
-  - [Prospecting & Lead Gen](#prospecting--lead-gen)
-  - [Outreach & Engagement](#outreach--engagement)
-  - [Pipeline & Revenue Ops](#pipeline--revenue-ops)
-  - [Intelligence & Research](#intelligence--research)
 - [The Gaps](#the-gaps)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
@@ -65,7 +65,37 @@ Sales automation skills are AI-powered workflows that handle repetitive GTM task
 - AI agents can now connect to CRM, email, LinkedIn, and enrichment tools directly
 - A single workflow skill can replace 3-4 hours of manual work per rep per day
 
-## Skills
+---
+
+## Workflow Skills
+
+Production-ready workflow skills that document exact API actions, workflow diagrams, AI logic, and setup commands. Each skill is a standalone file you can point any AI agent at.
+
+### Prospecting & Lead Gen
+
+- [Lead Enrichment & Qualification Pipeline](skills/01-lead-enrichment-qualification.md) - Takes raw leads, enriches via Apollo + Clearout, BANT-scores each one, pushes qualified leads into HubSpot with deal stages. **Uses:** Apollo, HubSpot, Clearout, Google Sheets.
+- [LinkedIn Prospect Researcher & Signal Tracker](skills/07-linkedin-prospect-researcher.md) - Monitors target accounts for buying signals — job changes, pain-point posts, competitor engagement. Enriches via Apollo, alerts in Slack. **Uses:** LinkedIn, Apollo, Google Sheets, HubSpot, Slack, Exa.
+- [Pre-Meeting Prospect Dossier Generator](skills/05-meeting-prep-dossier.md) - 30 minutes before every sales meeting, auto-generates a 1-page dossier with attendee profiles, company intel, deal history, and AI-generated talking points. **Uses:** Google Calendar, Apollo, LinkedIn, Firecrawl, HubSpot, Google Docs, Slack.
+
+### Outreach & Engagement
+
+- [Cold Outreach Sequencer](skills/02-cold-outreach-sequencer.md) - Builds and executes personalized multi-touch sequences (email → LinkedIn → follow-up → break-up). AI-generates hyper-personalized copy from prospect data, company news, and job postings. **Uses:** Apollo, Gmail, HubSpot, LinkedIn, Slack, Firecrawl, Exa.
+- [Post-Call Action Automator](skills/06-post-call-automator.md) - After every recorded call, extracts action items, objections, buying signals, and next steps. Updates CRM, creates tasks, drafts follow-up email, posts deal summary to Slack. **Uses:** Gong, HubSpot, Gmail, Slack, Google Docs.
+- [Deal Room Automator & Stakeholder Tracker](skills/10-deal-room-automator.md) - For deals above a threshold, auto-creates deal room (Drive folder + Notion page), maps all stakeholders by role (champion, EB, blocker), tracks mutual action plan, alerts when items stall. **Uses:** HubSpot, Google Drive, Slack, Gmail, Asana, Notion.
+
+### Pipeline & Revenue Ops
+
+- [CRM Auto-Sync from Email & Calendar](skills/03-crm-auto-sync.md) - Eliminates manual CRM data entry. Scans inbox for prospect emails, extracts deal signals (pricing discussions, objections, next steps), auto-updates the right CRM record, creates follow-up tasks. **Uses:** Gmail, Google Calendar, HubSpot, Salesforce, Pipedrive, Slack.
+- [Sales Pipeline Health Monitor & Forecaster](skills/04-sales-pipeline-monitor.md) - Daily pipeline health scoring. Flags stale deals, missing next steps, single-threaded risks, zombie deals with past close dates. Calculates weighted forecast and posts to Slack. **Uses:** HubSpot, Salesforce, Google Sheets, Slack.
+- [Revenue Operations Dashboard Builder](skills/08-revops-dashboard.md) - Pulls CRM data, calculates win rate, ACV, pipeline velocity, stage conversion rates, rep performance. Builds Google Sheets dashboard, posts weekly numbers to Slack. **Uses:** HubSpot, Salesforce, Google Sheets, Slack, Airtable.
+
+### Intelligence & Research
+
+- [Competitive Intelligence Monitor](skills/09-competitive-intel-monitor.md) - Tracks competitor websites daily for pricing/feature changes, monitors mentions across Twitter/Reddit/HN, auto-updates battle cards in Google Sheets, sends real-time alerts for major changes. **Uses:** Firecrawl, Exa, Ahrefs, Reddit, Twitter, Google Sheets, Slack.
+
+---
+
+## Open-Source Tools & Agents
 
 ### AI Sales Agents (End-to-End)
 
@@ -126,53 +156,6 @@ Claude Code / Cursor / Codex skills specifically designed for sales workflows.
 
 ---
 
-## Composio-Powered Workflow Skills
-
-Production-ready workflow skills built on [Composio](https://composio.dev) toolkits. Each skill documents the exact API actions, workflow diagrams, AI logic, and setup commands needed to automate a high-value sales process.
-
-> **How it works:** Connect your tools via `composio add <toolkit>`, then point any AI agent at the skill file. The skill tells the agent exactly which Composio actions to call and in what order.
-
-### Prospecting & Lead Gen
-
-- [Lead Enrichment & Qualification Pipeline](skills/01-lead-enrichment-qualification.md) - Takes raw leads, enriches via Apollo + Clearout, scores using BANT criteria, pushes qualified leads into HubSpot. **Toolkits:** Apollo, HubSpot, Clearout, Google Sheets. *"lead enrichment" 720/mo, "b2b lead generation" 8.1K/mo*
-- [LinkedIn Prospect Researcher & Signal Tracker](skills/07-linkedin-prospect-researcher.md) - Monitors target accounts for buying signals (job changes, posts about pain points, competitor engagement), enriches via Apollo, alerts in Slack. **Toolkits:** LinkedIn, Apollo, Google Sheets, HubSpot, Slack, Exa. *"linkedin scraping" 1.3K/mo, "linkedin automation" 2.4K/mo*
-- [Pre-Meeting Prospect Dossier Generator](skills/05-meeting-prep-dossier.md) - 30 minutes before every sales meeting, auto-generates a 1-page dossier with attendee profiles, company intel, deal history, and talking points. **Toolkits:** Google Calendar, Apollo, LinkedIn, Firecrawl, HubSpot, Google Docs, Slack. *"apollo io" 12.1K/mo*
-
-### Outreach & Engagement
-
-- [Cold Outreach Sequencer](skills/02-cold-outreach-sequencer.md) - Builds and executes personalized multi-touch sequences (email → LinkedIn → follow-up → break-up). AI-generates copy using prospect data. **Toolkits:** Apollo, Gmail, HubSpot, LinkedIn, Slack, Firecrawl, Exa. *"cold outreach" 590/mo, "outreach automation" 210/mo*
-- [Post-Call Action Automator](skills/06-post-call-automator.md) - After every Gong call, extracts action items, objections, next steps. Updates CRM, creates tasks, drafts follow-up email, posts to Slack. **Toolkits:** Gong, HubSpot, Gmail, Slack, Google Docs. *"gong" $13.51 CPC*
-- [Deal Room Automator & Stakeholder Tracker](skills/10-deal-room-automator.md) - For deals above threshold, auto-creates deal room (Drive folder + Notion page), maps stakeholders, tracks mutual action plan, alerts on stalls. **Toolkits:** HubSpot, Google Drive, Slack, Gmail, Asana, Notion. *"sales enablement" 3.6K/mo*
-
-### Pipeline & Revenue Ops
-
-- [CRM Auto-Sync from Email & Calendar](skills/03-crm-auto-sync.md) - Eliminates manual CRM entry. Scans inbox for prospect emails, extracts deal signals, auto-updates CRM records, creates follow-up tasks. **Toolkits:** Gmail, Google Calendar, HubSpot, Salesforce, Pipedrive, Slack. *"salesforce automation" 590/mo, "hubspot automation" 480/mo*
-- [Sales Pipeline Health Monitor & Forecaster](skills/04-sales-pipeline-monitor.md) - Daily pipeline health scoring. Flags stale deals, missing next steps, single-threaded risks. Calculates weighted forecast. **Toolkits:** HubSpot, Salesforce, Google Sheets, Slack. *"sales pipeline" 3.6K/mo, "revenue operations" 2.4K/mo*
-- [Revenue Operations Dashboard Builder](skills/08-revops-dashboard.md) - Pulls CRM data, calculates win rate, ACV, pipeline velocity, stage conversion rates. Builds Google Sheets dashboard, posts weekly to Slack. **Toolkits:** HubSpot, Salesforce, Google Sheets, Slack, Airtable. *"revenue operations" 2.4K/mo, "sales dashboard" 1.6K/mo*
-
-### Intelligence & Research
-
-- [Competitive Intelligence Monitor](skills/09-competitive-intel-monitor.md) - Tracks competitor websites for pricing/feature changes, monitors mentions across Twitter/Reddit/HN, builds auto-updating battle cards. **Toolkits:** Firecrawl, Exa, Ahrefs, Reddit, Twitter, Google Sheets, Slack. *"competitive intelligence" 2.9K/mo, "competitor analysis" 6.6K/mo*
-
-### Composio Toolkits Used
-
-| Toolkit | Category | Used In |
-|---------|----------|---------|
-| [HubSpot](https://composio.dev/toolkits/hubspot) | CRM | 8 skills |
-| [Slack](https://composio.dev/toolkits/slack) | Notifications | 9 skills |
-| [Apollo](https://composio.dev/toolkits/apollo) | Lead Data | 5 skills |
-| [Gmail](https://composio.dev/toolkits/gmail) | Email | 5 skills |
-| [Google Sheets](https://composio.dev/toolkits/googlesheets) | Dashboards | 6 skills |
-| [Salesforce](https://composio.dev/toolkits/salesforce) | CRM | 4 skills |
-| [LinkedIn](https://composio.dev/toolkits/linkedin) | Social Selling | 3 skills |
-| [Firecrawl](https://composio.dev/toolkits/firecrawl) | Web Scraping | 3 skills |
-| [Exa](https://composio.dev/toolkits/exa) | Search | 3 skills |
-| [Gong](https://composio.dev/toolkits/gong) | Call Intelligence | 1 skill |
-| [Ahrefs](https://composio.dev/toolkits/ahrefs) | SEO Intel | 1 skill |
-| [Pipedrive](https://composio.dev/toolkits/pipedrive) | CRM | 1 skill |
-
----
-
 ## The Gaps
 
 Massive opportunities — high demand, zero good open-source supply:
@@ -192,7 +175,7 @@ Massive opportunities — high demand, zero good open-source supply:
 
 ## Getting Started
 
-### Quick Start with Composio
+### Quick Start
 
 ```bash
 pip install composio        # or: npm install composio
@@ -203,7 +186,7 @@ composio add gmail          # OAuth2 — email outreach
 composio add slack          # OAuth2 — notifications
 ```
 
-Then point any AI agent at a skill file and go.
+Then point any AI agent at a [workflow skill](#workflow-skills) and go.
 
 ### Sales Frameworks (for building agents)
 
