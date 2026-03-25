@@ -36,6 +36,7 @@ Every B2B company spends 30-60% of revenue on sales. Most of that goes to repeti
 - [📞 Voice & Call Agents](#-voice--call-agents)
 - [🧰 Marketing Automation](#-marketing-automation)
 - [🔌 Agent Skills for Sales](#-agent-skills-for-sales)
+- [🔧 Composio-Powered Workflow Skills](#-composio-powered-workflow-skills)
 - [📖 Resources](#-resources)
 - [Contributing](#contributing)
 
@@ -127,6 +128,57 @@ Claude Code / Cursor / Codex skills specifically designed for sales workflows.
 | [MarketMeNow](https://github.com/thearnavrustagi/marketmenow) | ![Stars](https://img.shields.io/github/stars/thearnavrustagi/marketmenow?style=flat-square) | Outbound marketing automation as ClawCompatible skill. |
 | [Azure CEO](https://github.com/cogitomancer/azure-ceo) | ![Stars](https://img.shields.io/github/stars/cogitomancer/azure-ceo?style=flat-square) | Multi-agent architecture for scalable marketing automation using Azure AI. |
 | [AI Agency (CEO + Marketing)](https://github.com/mauseoluwasegun/-AI-Agency-with-CEO-and-Marketing-Agent) | ![Stars](https://img.shields.io/github/stars/mauseoluwasegun/-AI-Agency-with-CEO-and-Marketing-Agent?style=flat-square) | AI agency with CEO and marketing agent working together. |
+
+---
+
+## 🔧 Composio-Powered Workflow Skills
+
+**10 production-ready workflow skills** built on [Composio](https://composio.dev) toolkits. Each skill tells an AI agent exactly how to perform a high-value sales workflow using real API actions.
+
+> **How it works:** Each skill references specific Composio actions (e.g., `Apollo: Enrich person`, `HubSpot: Create deal`). Connect your tools via `composio add <toolkit>`, then give the workflow description to any AI agent.
+
+| # | Skill | Composio Toolkits | Search Volume Signal |
+|---|-------|-------------------|---------------------|
+| 1 | [Lead Enrichment & Qualification Pipeline](skills/01-lead-enrichment-qualification.md) | Apollo, HubSpot, Clearout, Google Sheets | "lead enrichment" 720/mo, "b2b lead generation" 8.1K/mo |
+| 2 | [Cold Outreach Sequencer](skills/02-cold-outreach-sequencer.md) | Apollo, Gmail, HubSpot, LinkedIn, Slack, Firecrawl, Exa | "cold outreach" 590/mo, "outreach automation" 210/mo |
+| 3 | [CRM Auto-Sync from Email & Calendar](skills/03-crm-auto-sync.md) | Gmail, Google Calendar, HubSpot, Salesforce, Pipedrive, Slack | "CRM automation" 390/mo, "salesforce automation" 590/mo |
+| 4 | [Sales Pipeline Health Monitor](skills/04-sales-pipeline-monitor.md) | HubSpot, Salesforce, Google Sheets, Slack | "sales pipeline" 3.6K/mo, "revenue operations" 2.4K/mo |
+| 5 | [Pre-Meeting Prospect Dossier](skills/05-meeting-prep-dossier.md) | Google Calendar, Apollo, LinkedIn, Firecrawl, HubSpot, Slack | "apollo io" 12.1K/mo, "seamless ai" 14.8K/mo |
+| 6 | [Post-Call Action Automator](skills/06-post-call-automator.md) | Gong, HubSpot, Gmail, Slack, Google Docs | "gong call analysis" $13.51 CPC, "sales call recording" 480/mo |
+| 7 | [LinkedIn Prospect Researcher](skills/07-linkedin-prospect-researcher.md) | LinkedIn, Apollo, Google Sheets, HubSpot, Slack, Exa | "linkedin scraping" 1.3K/mo, "linkedin automation" 2.4K/mo |
+| 8 | [Revenue Operations Dashboard](skills/08-revops-dashboard.md) | HubSpot, Salesforce, Google Sheets, Slack, Airtable | "revenue operations" 2.4K/mo, "sales dashboard" 1.6K/mo |
+| 9 | [Competitive Intelligence Monitor](skills/09-competitive-intel-monitor.md) | Firecrawl, Exa, Ahrefs, Reddit, Twitter, Slack | "competitive intelligence" 2.9K/mo, "competitor analysis" 6.6K/mo |
+| 10 | [Deal Room Automator](skills/10-deal-room-automator.md) | HubSpot, Google Drive, Slack, Gmail, Asana, Notion | "sales enablement" 3.6K/mo, "deal management" 390/mo |
+
+### Composio Toolkits Used Across Skills
+
+| Toolkit | Skills Using It | Category |
+|---------|----------------|----------|
+| [HubSpot](https://composio.dev/toolkits/hubspot) | 8/10 | CRM |
+| [Apollo](https://composio.dev/toolkits/apollo) | 5/10 | Lead Data |
+| [Slack](https://composio.dev/toolkits/slack) | 9/10 | Notifications |
+| [Gmail](https://composio.dev/toolkits/gmail) | 5/10 | Email |
+| [Google Sheets](https://composio.dev/toolkits/googlesheets) | 6/10 | Data/Dashboards |
+| [Salesforce](https://composio.dev/toolkits/salesforce) | 4/10 | CRM |
+| [LinkedIn](https://composio.dev/toolkits/linkedin) | 3/10 | Social Selling |
+| [Firecrawl](https://composio.dev/toolkits/firecrawl) | 3/10 | Web Scraping |
+| [Gong](https://composio.dev/toolkits/gong) | 1/10 | Call Intelligence |
+| [Exa](https://composio.dev/toolkits/exa) | 3/10 | Search/Research |
+| [Ahrefs](https://composio.dev/toolkits/ahrefs) | 1/10 | SEO Intelligence |
+| [Pipedrive](https://composio.dev/toolkits/pipedrive) | 1/10 | CRM |
+
+### Quick Start
+
+```bash
+pip install composio        # or: npm install composio
+composio login
+composio add hubspot        # OAuth2 — connect your CRM
+composio add apollo         # API key — lead enrichment
+composio add gmail          # OAuth2 — email outreach
+composio add slack          # OAuth2 — notifications
+```
+
+Then point any AI agent at the skill file and go.
 
 ---
 
