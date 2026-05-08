@@ -125,6 +125,7 @@ Production-ready workflow skills that document exact API actions, workflow diagr
 - [Business Leads AI Automation](https://github.com/asiifdev/business-leads-ai-automation) - Google Maps scraper + AI-powered email/WhatsApp templates for local business lead gen. *68+ stars*
 - [Zeo Client Acquisition](https://github.com/yashab-cyber/zeo) - Complete AI-powered client acquisition and engagement system for B2B companies.
 - [Skales](https://github.com/skalesapp/skales) - Free AI desktop agent that automates email, calendar, browser, code gen across 13+ AI providers. *600+ stars*
+- [FindMeMail](https://findmemail.io) - AI-powered B2B lead search using plain English. Search 32k+ companies, get SMTP-verified founder & decision-maker emails. Free tier + $200 lifetime.
 
 ### Sales Content & Copywriting
 
