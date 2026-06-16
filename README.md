@@ -206,6 +206,7 @@ These frameworks define how your AI agent should qualify and engage leads:
 - **[HubSpot API](https://developers.hubspot.com/)** — CRM integration
 - **[Salesforce API](https://developer.salesforce.com/)** — Enterprise CRM
 - **[Composio Toolkits](https://composio.dev/toolkits)** — 850+ app integrations for AI agents
+- **[Superhighway API](https://superhighway.walls.sh)** — Web search, scrape & deep research for agents; pay-per-call. [Lead generation agent guide](https://superhighway.walls.sh/guides/lead-generation-agent)
 
 ---
 
