@@ -144,6 +144,7 @@ Production-ready workflow skills that document exact API actions, workflow diagr
 - [AI Automations (Make.com)](https://github.com/Mr-Asante/AI-Automations) - Make.com AI automation blueprints for marketing, sales, and productivity.
 - [YouTube Automation Agent](https://github.com/Bhavik-Jikadara/youtube-automation-agent) - Automates YouTube video creation — market research, script writing, thumbnail generation.
 - [n8n Text Templater](https://github.com/llmx-tech/n8n-nodes-text-templater) - N8N node for dynamic text templating — AI prompts, email campaigns, personalization.
+- [Mautic](https://www.mautic.org) - Open-source marketing automation platform for email campaigns, segmentation, lead management, and customer journeys.
 
 ### Agent Skills for Sales
 
